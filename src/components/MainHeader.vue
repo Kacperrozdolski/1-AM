@@ -3,16 +3,31 @@
     <div class="header-wrapper">
       <h1>1:AM</h1>
       <nav>
-        <li>porfolio</li>
-        <li>about me</li>
-        <li>contact</li>
+        <li @click="openPortfolio()">porfolio</li>
+        <li @click="openAbout()">about me</li>
+        <li @click="openContact()">contact</li>
       </nav>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    openPortfolio() {
+      console.log("Porfolio");
+      this.$emit("openPortfolio");
+    },
+    openAbout() {
+      console.log("about");
+      this.$emit("openAbout");
+    },
+    openContact() {
+      console.log("contact");
+      this.$emit("openContact");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -44,6 +59,7 @@ export default {};
       margin: 0px 10px 0px 10px;
       color: #e7d9ea;
       font-size: 1rem;
+      cursor: pointer;
     }
   }
 }

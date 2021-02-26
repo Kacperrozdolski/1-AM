@@ -1,21 +1,32 @@
 <template>
   <div class="content-container">
     <div class="content-wrapper">
-      <div class="cell"></div>
-      <div class="cell">
+      <div @click="openProject()" class="cell"></div>
+      <div @click="openProject()" class="cell">
         <img src="@/assets/steps.svg" />
         <h1>STEPS</h1>
       </div>
-      <div class="cell"></div>
-      <div class="cell"><img src="@/assets/unda.png" /></div>
-      <div class="cell"></div>
-      <div class="cell"><img src="@/assets/lyte.png" /></div>
+      <div @click="openProject()" class="cell"></div>
+      <div @click="openProject()" class="cell">
+        <img src="@/assets/unda.png" />
+      </div>
+      <div @click="openProject()" class="cell"></div>
+      <div @click="openProject()" class="cell">
+        <img src="@/assets/lyte.png" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    openProject() {
+      console.log("Project");
+      this.$emit("openProject");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -26,6 +37,17 @@ export default {};
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  animation-name: slideIn;
+  animation-duration: 0.7s;
+  
+}
+@keyframes slideIn {
+  from {
+    transform: translate(0px, -40px);
+  }
+  to {
+    transform: translate(0);
+  }
 }
 .content-wrapper {
   display: flex;
@@ -36,7 +58,12 @@ export default {};
     background-color: transparent;
     width: 400px;
     height: 230px;
-    margin: 10px;
+    margin: 15px;
+    transition: 0.55s;
+  }
+  .cell:hover {
+    transform: translate(0, -6px);
+    cursor: pointer;
   }
   .cell:nth-child(1) {
     background-image: url("../assets/collusion.png");
