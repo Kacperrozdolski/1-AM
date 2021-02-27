@@ -1,6 +1,6 @@
 <template>
   <div class="presentation-container">
-    <h1>fully responsive e-commerce website desgin</h1>
+    <h1>fully responsive e-commerce website</h1>
     <div class="presentation-carousele">
       <vueper-slides :touchable="false" fixedHeight="100%">
         <vueper-slide
@@ -52,7 +52,6 @@ export default {
     height: 100%;
     width: 70%;
     background: transparent;
-    border: 3px solid #16c79a;
   }
 }
 </style>

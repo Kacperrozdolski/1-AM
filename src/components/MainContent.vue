@@ -39,7 +39,6 @@ export default {
   align-items: center;
   animation-name: slideIn;
   animation-duration: 0.7s;
-  
 }
 @keyframes slideIn {
   from {
@@ -49,6 +48,7 @@ export default {
     transform: translate(0);
   }
 }
+
 .content-wrapper {
   display: flex;
   width: 100%;
