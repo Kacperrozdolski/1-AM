@@ -3,7 +3,7 @@
     <div class="contact-wrapper">
       <div class="contact-message">
         <div class="contact-message-wrapper">
-          <h1 ref="message" class="green"></h1>
+          <h1 ref="typing" class="green"></h1>
           <div class="glitch-container">
             <div class="glitch" data-text="Hit me up!">
               Hit me up!
@@ -12,12 +12,12 @@
           </div>
         </div>
       </div>
-      <div class="contact-form">
-        <input placeholder="name" type="text" />
-        <input placeholder="email" type="text" />
-        <textarea placeholder="message"></textarea>
-        <button>submit</button>
-      </div>
+      <form class="contact-form">
+        <input v-model="name" placeholder="name" type="text" />
+        <input v-model="email" placeholder="email" type="text" />
+        <textarea v-model="message" placeholder="message"></textarea>
+        <button @click="sendMail">submit</button>
+      </form>
     </div>
   </div>
 </template>
@@ -25,15 +25,43 @@
 <script>
 export default {
   data() {
-    return { i: 0, txt: "Don't be shy.", speed: 120 };
+    return {
+      i: 0,
+      txt: "Don't be shy.",
+      speed: 120,
+      name: "",
+      email: "",
+      message: "",
+    };
   },
   mounted() {
     this.typeWriter();
+    const data = { name: this.name, email: this.email, message: this.message };
+    this.axios.post("https://reqres.in/api/articles", data);
   },
   methods: {
+    sendMail($event) {
+      $event.preventDefault();
+      let data = {
+        name: this.name,
+        email: this.email,
+        message: this.message,
+      };
+      let url =
+        "https://sheet.best/api/sheets/37d74d64-60d5-4a55-8cb3-0632ced02357";
+      this.axios.post(url, data).then(() => {
+        this.name = "";
+        this.email = "";
+        this.message = "";
+        this.$refs.typing.innerHTML = "";
+        this.txt = "Thank you!";
+        this.i = 0;
+        this.typeWriter();
+      });
+    },
     typeWriter() {
       if (this.i < this.txt.length) {
-        this.$refs.message.innerHTML += this.txt.charAt(this.i);
+        this.$refs.typing.innerHTML += this.txt.charAt(this.i);
         this.i++;
         setTimeout(this.typeWriter, this.speed);
       }
