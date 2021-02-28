@@ -58,7 +58,7 @@ export default {
 <style lang="scss" scoped>
 .landing {
   width: 100%;
-  min-height: 109vh;
+  min-height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -15,7 +15,7 @@
       <div class="contact-form">
         <input placeholder="name" type="text" />
         <input placeholder="email" type="text" />
-        <textarea placeholder="message" cols="30" rows="10"></textarea>
+        <textarea placeholder="message"></textarea>
         <button>submit</button>
       </div>
     </div>
@@ -61,6 +61,50 @@ export default {
       display: flex;
       justify-content: center;
       flex-direction: column;
+      input {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid #16c79a;
+        outline: 0;
+        color: #e7d9ea;
+        padding: 7px 0;
+        background: transparent;
+        margin-bottom: 10px;
+        font-family: Poppins;
+        transition: border-color 0.2s;
+      }
+      input::placeholder {
+        font-family: Poppins;
+        color: #16c79a;
+        font-weight: 300;
+      }
+      textarea {
+        width: 100%;
+        border: 0;
+        height: 150px;
+        border-bottom: 2px solid #16c79a;
+        outline: 0;
+        color: #e7d9ea;
+        font-family: Poppins;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+        margin-bottom: 10px;
+        resize: none;
+      }
+      textarea::placeholder {
+        font-family: Poppins;
+        color: #16c79a;
+        font-weight: 300;
+      }
+      button {
+        background: none;
+        font-family: Poppins;
+        color: #16c79a;
+        font-weight: 300;
+        border: 1px solid #16c79a;
+        cursor: pointer;
+      }
     }
     .contact-message {
       width: 65%;
