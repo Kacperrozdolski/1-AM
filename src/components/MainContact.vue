@@ -12,11 +12,11 @@
           </div>
         </div>
       </div>
-      <form class="contact-form">
-        <input v-model="name" placeholder="name" type="text" />
-        <input v-model="email" placeholder="email" type="text" />
-        <textarea v-model="message" placeholder="message"></textarea>
-        <button @click="sendMail">submit</button>
+      <form @submit="sendMail" class="contact-form">
+        <input required v-model="name" placeholder="name" type="text" />
+        <input required v-model="email" placeholder="email" type="email" />
+        <textarea required v-model="message" placeholder="message"></textarea>
+        <button>submit</button>
       </form>
     </div>
   </div>
@@ -36,19 +36,17 @@ export default {
   },
   mounted() {
     this.typeWriter();
-    const data = { name: this.name, email: this.email, message: this.message };
-    this.axios.post("https://reqres.in/api/articles", data);
   },
   methods: {
     sendMail($event) {
       $event.preventDefault();
+      let url =
+        "https://sheet.best/api/sheets/37d74d64-60d5-4a55-8cb3-0632ced02357";
       let data = {
         name: this.name,
         email: this.email,
         message: this.message,
       };
-      let url =
-        "https://sheet.best/api/sheets/37d74d64-60d5-4a55-8cb3-0632ced02357";
       this.axios.post(url, data).then(() => {
         this.name = "";
         this.email = "";
@@ -97,9 +95,8 @@ export default {
         color: #e7d9ea;
         padding: 7px 0;
         background: transparent;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font-family: Poppins;
-        transition: border-color 0.2s;
       }
       input::placeholder {
         font-family: Poppins;
@@ -119,6 +116,7 @@ export default {
         transition: border-color 0.2s;
         margin-bottom: 10px;
         resize: none;
+        margin-bottom: 40px;
       }
       textarea::placeholder {
         font-family: Poppins;
@@ -132,6 +130,7 @@ export default {
         font-weight: 300;
         border: 1px solid #16c79a;
         cursor: pointer;
+        outline: 0;
       }
     }
     .contact-message {
@@ -264,6 +263,38 @@ export default {
           margin: 0;
           width: 100%;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-container {
+    .contact-wrapper {
+      flex-direction: column;
+      text-align: center;
+      .contact-message {
+        width: 90%;
+        .contact-message-wrapper {
+          .green {
+            font-size: 10vw;
+          }
+          .glitch-container {
+            display: none;
+          }
+        }
+      }
+      .contact-form {
+        width: 90%;
+      }
+    }
+
+    .contact-message-wrapper {
+      .green {
+        font-size: 10vw;
+      }
+      .glitch-container {
+        display: none;
       }
     }
   }

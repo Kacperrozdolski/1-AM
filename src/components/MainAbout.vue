@@ -71,4 +71,11 @@ export default {};
     }
   }
 }
+@media only screen and (max-width: 600px) {
+  .about-container {
+    .about-wrapper {
+      width: 90%;
+    }
+  }
+}
 </style>
