@@ -14,7 +14,7 @@
         Besides that i love to meet new people, read books, hitchhiking and
         learning new foreign languages
       </p>
-      <img src="@/assets/coolperson.jpg" />
+      <img src="@/assets/myself.jpg" />
       <p>It's me!</p>
     </div>
   </div>

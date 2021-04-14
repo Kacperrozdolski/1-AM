@@ -1,7 +1,7 @@
 <template>
   <MainHeader />
   <div class="presentation-container">
-    <h1>{{ this.$route.query.name }}</h1>
+    <h1>{{ tittle }}</h1>
     <div class="presentation-carousele">
       <vueper-slides :touchable="false" fixedHeight="100%">
         <vueper-slide
@@ -27,19 +27,27 @@ export default {
     VueperSlides,
     VueperSlide,
   },
+  mounted() {
+    if (this.$route.query.name == "mntn") {
+      this.slides = [
+        {
+          image: require(`../assets/projectCovers/mntn.png`),
+        },
+        {
+          image: require("../assets/projectCovers/adventure.png"),
+        },
+        {
+          image: require("../assets/projectCovers/steps.png"),
+        },
+      ];
+      this.tittle =
+        "MNTN is perfectly responsive and pixel perfect hiking guide website";
+    }
+  },
   data() {
     return {
-      slides: [
-        {
-          image: require(`../assets/${this.$route.query.name}.png`),
-        },
-        {
-          image: require("../assets/adventure.png"),
-        },
-        {
-          image: require("../assets/steps.png"),
-        },
-      ],
+      tittle: "",
+      slides: [],
     };
   },
 };

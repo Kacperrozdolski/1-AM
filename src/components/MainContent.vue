@@ -58,27 +58,27 @@ export default {
     cursor: pointer;
   }
   .cell:nth-child(1) {
-    background-image: url("../assets/adventure.png");
+    background-image: url("../assets/projectCovers/adventure.png");
     background-size: cover;
   }
   .cell:nth-child(2) {
-    background-image: url("../assets/steps.png");
+    background-image: url("../assets/projectCovers/steps.png");
     background-size: cover;
   }
   .cell:nth-child(3) {
-    background-image: url("../assets/collusion.png");
+    background-image: url("../assets/projectCovers/collusion.png");
     background-size: cover;
   }
   .cell:nth-child(4) {
-    background-image: url("../assets/mntn.png");
+    background-image: url("../assets/projectCovers/mntn.png");
     background-size: cover;
   }
   .cell:nth-child(5) {
-    background-image: url("../assets/duck.png");
+    background-image: url("../assets/projectCovers/duck.png");
     background-size: cover;
   }
   .cell:nth-child(6) {
-    background-image: url("../assets/lyte.png");
+    background-image: url("../assets/projectCovers/lyte.png");
     background-size: cover;
   }
 }
