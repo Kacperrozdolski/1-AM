@@ -1,6 +1,7 @@
 <template>
+  <MainHeader />
   <div class="presentation-container">
-    <h1>fully responsive e-commerce website</h1>
+    <h1>{{ this.$route.query.name }}</h1>
     <div class="presentation-carousele">
       <vueper-slides :touchable="false" fixedHeight="100%">
         <vueper-slide
@@ -11,24 +12,32 @@
       </vueper-slides>
     </div>
   </div>
+  <MainFooter />
 </template>
 
 <script>
+import MainHeader from "@/components/MainHeader.vue";
+import MainFooter from "@/components/MainFooter.vue";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 export default {
-  components: { VueperSlides, VueperSlide },
+  components: {
+    MainHeader,
+    MainFooter,
+    VueperSlides,
+    VueperSlide,
+  },
   data() {
     return {
       slides: [
         {
-          image: require("@/assets/freelance.png"),
+          image: require(`../assets/${this.$route.query.name}.png`),
         },
         {
-          image: require("@/assets/freelance.png"),
+          image: require("../assets/adventure.png"),
         },
         {
-          image: require("@/assets/freelance.png"),
+          image: require("../assets/steps.png"),
         },
       ],
     };

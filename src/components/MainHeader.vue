@@ -15,16 +15,13 @@
 export default {
   methods: {
     openPortfolio() {
-      console.log("Porfolio");
-      this.$emit("openPortfolio");
+      this.$router.push("/");
     },
     openAbout() {
-      console.log("about");
-      this.$emit("openAbout");
+      this.$router.push("/about");
     },
     openContact() {
-      console.log("contact");
-      this.$emit("openContact");
+      this.$router.push("/contact");
     },
   },
 };

@@ -1,4 +1,5 @@
 <template>
+  <MainHeader />
   <div class="contact-container">
     <div class="contact-wrapper">
       <div class="contact-message">
@@ -20,10 +21,14 @@
       </form>
     </div>
   </div>
+  <MainFooter />
 </template>
 
 <script>
+import MainHeader from "@/components/MainHeader.vue";
+import MainFooter from "@/components/MainFooter.vue";
 export default {
+  components: { MainHeader, MainFooter },
   data() {
     return {
       i: 0,
@@ -96,6 +101,7 @@ export default {
         padding: 7px 0;
         background: transparent;
         margin-bottom: 20px;
+        caret-color: #e7d9ea;
         font-family: Poppins;
       }
       input::placeholder {

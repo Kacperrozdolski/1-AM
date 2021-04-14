@@ -1,4 +1,5 @@
 <template>
+  <MainHeader />
   <div class="about-container">
     <div class="about-wrapper">
       <p>
@@ -17,10 +18,15 @@
       <p>It's me!</p>
     </div>
   </div>
+  <MainFooter />
 </template>
 
 <script>
-export default {};
+import MainHeader from "@/components/MainHeader.vue";
+import MainFooter from "@/components/MainFooter.vue";
+export default {
+  components: { MainHeader, MainFooter },
+};
 </script>
 
 <style lang="scss" scoped>

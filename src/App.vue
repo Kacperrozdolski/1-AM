@@ -1,12 +1,9 @@
 <template>
-  <landing-page></landing-page>
+  <router-view />
 </template>
 
 <script>
-import LandingPage from "./views/LandingPage.vue";
-export default {
-  components: { LandingPage }
-};
+export default {};
 </script>
 
 <style lang="scss">

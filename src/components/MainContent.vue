@@ -1,19 +1,12 @@
 <template>
   <div class="content-container">
     <div class="content-wrapper">
-      <div @click="openProject()" class="cell"></div>
-      <div @click="openProject()" class="cell">
-        <img src="@/assets/steps.svg" />
-        <h1>STEPS</h1>
-      </div>
-      <div @click="openProject()" class="cell"></div>
-      <div @click="openProject()" class="cell">
-        <img src="@/assets/unda.png" />
-      </div>
-      <div @click="openProject()" class="cell"></div>
-      <div @click="openProject()" class="cell">
-        <img src="@/assets/lyte.png" />
-      </div>
+      <div @click="openProject('mntn')" class="cell"></div>
+      <div @click="openProject('steps')" class="cell"></div>
+      <div @click="openProject('collusion')" class="cell"></div>
+      <div @click="openProject('adventure')" class="cell"></div>
+      <div @click="openProject('duck')" class="cell"></div>
+      <div @click="openProject('lyte')" class="cell"></div>
     </div>
   </div>
 </template>
@@ -21,9 +14,8 @@
 <script>
 export default {
   methods: {
-    openProject() {
-      console.log("Project");
-      this.$emit("openProject");
+    openProject(project) {
+      this.$router.push(`"/project?name=${project}`);
     },
   },
 };
@@ -66,49 +58,28 @@ export default {
     cursor: pointer;
   }
   .cell:nth-child(1) {
-    background-image: url("../assets/collusion.png");
+    background-image: url("../assets/adventure.png");
     background-size: cover;
   }
   .cell:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #3d3b3b;
-    flex-direction: column;
-    h1 {
-      margin: 0;
-      font-weight: 100;
-      font-size: 40px;
-      color: white;
-    }
+    background-image: url("../assets/steps.png");
+    background-size: cover;
   }
   .cell:nth-child(3) {
-    background-image: url("../assets/freelance.png");
+    background-image: url("../assets/collusion.png");
     background-size: cover;
   }
   .cell:nth-child(4) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #01adb7;
-    flex-direction: column;
-    img {
-      height: 90%;
-    }
+    background-image: url("../assets/mntn.png");
+    background-size: cover;
   }
   .cell:nth-child(5) {
-    background-image: url("../assets/skullcandy.png");
+    background-image: url("../assets/duck.png");
     background-size: cover;
   }
   .cell:nth-child(6) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #171313;
-    flex-direction: column;
-    img {
-      height: 90%;
-    }
+    background-image: url("../assets/lyte.png");
+    background-size: cover;
   }
 }
 </style>
