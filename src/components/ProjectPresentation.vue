@@ -8,6 +8,7 @@
           v-for="(slide, i) in slides"
           :key="i"
           :image="slide.image"
+          border
         ></vueper-slide>
       </vueper-slides>
     </div>
@@ -41,9 +42,67 @@ export default {
         },
       ];
       this.tittle =
-        "MNTN is perfectly responsive and pixel perfect hiking guide website";
+        "MNTN is completely responsive and pixel perfect hiking guide website";
+    }
+    if (this.$route.query.name == "adventure") {
+      this.slides = [
+        {
+          image: require(`../assets/adventure/1.png`),
+        },
+        {
+          image: require("../assets/adventure/2.png"),
+        },
+        {
+          image: require("../assets/adventure/3.png"),
+        },
+      ];
+      this.tittle = "Memory card game in Adventure Time world.";
+    }
+    if (this.$route.query.name == "duck") {
+      this.slides = [
+        {
+          image: require(`../assets/projectCovers/mntn.png`),
+        },
+        {
+          image: require("../assets/projectCovers/adventure.png"),
+        },
+        {
+          image: require("../assets/projectCovers/steps.png"),
+        },
+      ];
+      this.tittle =
+        "Duck Interactive is completely responsive and pixel perfect company website";
+    }
+    if (this.$route.query.name == "steps") {
+      this.slides = [
+        {
+          image: require(`../assets/steps/1.png`),
+        },
+        {
+          image: require("../assets/steps/2.png"),
+        },
+        {
+          image: require("../assets/steps/3.png"),
+        },
+      ];
+      this.tittle = "Steps - browser tool for creating simple roadmaps.";
+    }
+    if (this.$route.query.name == "lyte") {
+      this.slides = [
+        {
+          image: require(`../assets/projectCovers/mntn.png`),
+        },
+        {
+          image: require("../assets/projectCovers/adventure.png"),
+        },
+        {
+          image: require("../assets/projectCovers/steps.png"),
+        },
+      ];
+      this.tittle = "Lyte app - url shortener service.";
     }
   },
+
   data() {
     return {
       tittle: "",
