@@ -32,13 +32,13 @@ export default {
     if (this.$route.query.name == "mntn") {
       this.slides = [
         {
-          image: require(`../assets/projectCovers/mntn.png`),
+          image: require(`../assets/mntn/1.png`),
         },
         {
-          image: require("../assets/projectCovers/adventure.png"),
+          image: require("../assets/mntn/2.png"),
         },
         {
-          image: require("../assets/projectCovers/steps.png"),
+          image: require("../assets/mntn/3.png"),
         },
       ];
       this.tittle =
@@ -90,13 +90,10 @@ export default {
     if (this.$route.query.name == "lyte") {
       this.slides = [
         {
-          image: require(`../assets/projectCovers/mntn.png`),
+          image: require(`../assets/lyte/1.png`),
         },
         {
-          image: require("../assets/projectCovers/adventure.png"),
-        },
-        {
-          image: require("../assets/projectCovers/steps.png"),
+          image: require("../assets/lyte/2.png"),
         },
       ];
       this.tittle = "Lyte app - url shortener service.";

@@ -1,7 +1,7 @@
 <template>
   <div class="header-container">
     <div class="header-wrapper">
-      <h1>1:AM</h1>
+      <h1 @click="openPortfolio()">1:AM</h1>
       <nav>
         <li @click="openPortfolio()">porfolio</li>
         <li @click="openAbout()">about me</li>
@@ -48,6 +48,7 @@ export default {
     font-size: 60px;
     margin: 0;
     color: #16c79a;
+    cursor: pointer;
   }
   nav {
     display: flex;
