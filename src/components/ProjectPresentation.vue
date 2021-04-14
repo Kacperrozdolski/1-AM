@@ -5,10 +5,11 @@
     <div class="presentation-carousele">
       <vueper-slides :touchable="false" fixedHeight="100%">
         <vueper-slide
+          :content="slide.content"
           v-for="(slide, i) in slides"
           :key="i"
           :image="slide.image"
-          border
+          :style="'color:white'"
         ></vueper-slide>
       </vueper-slides>
     </div>
@@ -40,6 +41,10 @@ export default {
         {
           image: require("../assets/mntn/3.png"),
         },
+        {
+          content:
+            "Slide title can be HTML.<a href='https://www.w3schools.com'>Visit W3Schools</a> the slide content, <span style='font-size: 1.2em;color: yellow'>why not?</span>",
+        },
       ];
       this.tittle =
         "MNTN is completely responsive and pixel perfect hiking guide website";
@@ -61,13 +66,13 @@ export default {
     if (this.$route.query.name == "duck") {
       this.slides = [
         {
-          image: require(`../assets/projectCovers/mntn.png`),
+          image: require(`../assets/duck/1.png`),
         },
         {
-          image: require("../assets/projectCovers/adventure.png"),
+          image: require("../assets/duck/2.png"),
         },
         {
-          image: require("../assets/projectCovers/steps.png"),
+          image: require("../assets/duck/3.png"),
         },
       ];
       this.tittle =
