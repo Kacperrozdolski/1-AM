@@ -103,7 +103,7 @@ export default {
     if (this.$route.query.name == "lyte") {
       this.slides = [
         {
-          content: `https://kacperrozdolski.github.io/lyte/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
+          content: `<a href="https://kacperrozdolski.github.io/lyte/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
         },
         {
           image: require(`../assets/lyte/1.png`),
