@@ -43,7 +43,7 @@ export default {
         },
         {
           content:
-            "Slide title can be HTML.<a href='https://www.w3schools.com'>Visit W3Schools</a> the slide content, <span style='font-size: 1.2em;color: yellow'>why not?</span>",
+            "<div style='width:100px;height:100px;background:red;'></div>",
         },
       ];
       this.tittle =
@@ -128,8 +128,18 @@ export default {
   }
   .presentation-carousele {
     height: 100%;
-    width: 70%;
+    width: 60%;
     background: transparent;
+    .vueperslides__arrow {
+      color: #16c79a;
+    }
+    .vueperslides__bullet .default {
+      border: 1px solid #16c79a;
+      transition: 0.5s;
+    }
+    .vueperslides__bullet--active .default {
+      background-color: #42b983;
+    }
   }
 }
 </style>

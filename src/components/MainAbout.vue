@@ -9,8 +9,8 @@
         and keyboard. I want to create most user friendly websites which bring
         value and purpose.
         <br /><br />
-        My toolset contain HTML, SCSS, JavaScript, Vue.js & Figma.
-        <br /><br />
+        My toolset contain HTML, SCSS, JavaScript, Vue.js, Vuex, Vue Router,
+        REST API, GIT & Figma. <br /><br />
         Besides that i love to meet new people, read books, hitchhiking and
         learning new foreign languages
       </p>
@@ -40,7 +40,7 @@ export default {
     position: fixed;
   }
   .about-wrapper {
-    width: 50%;
+    width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
