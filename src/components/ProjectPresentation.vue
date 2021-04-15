@@ -103,6 +103,18 @@ export default {
       ];
       this.tittle = "Lyte app - url shortener service.";
     }
+    if (this.$route.query.name == "charity") {
+      this.slides = [
+        {
+          image: require(`../assets/charity/1.png`),
+        },
+        {
+          image: require("../assets/charity/2.png"),
+        },
+      ];
+      this.tittle =
+        "Earth Foundation is completely responsive and pixel perfect charity website";
+    }
   },
 
   data() {

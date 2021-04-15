@@ -6,7 +6,7 @@
       <div @click="openProject('lyte')" class="cell"></div>
       <div @click="openProject('mntn')" class="cell"></div>
       <div @click="openProject('duck')" class="cell"></div>
-      <div @click="openProject('collusion')" class="cell"></div>
+      <div @click="openProject('charity')" class="cell"></div>
     </div>
   </div>
 </template>
@@ -78,7 +78,7 @@ export default {
     background-size: cover;
   }
   .cell:nth-child(6) {
-    background-image: url("../assets/projectCovers/collusion.png");
+    background-image: url("../assets/projectCovers/charity.png");
     background-size: cover;
   }
 }
