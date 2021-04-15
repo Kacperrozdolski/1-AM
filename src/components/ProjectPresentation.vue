@@ -33,6 +33,9 @@ export default {
     if (this.$route.query.name == "mntn") {
       this.slides = [
         {
+          content: `<a href="https://kacperrozdolski.github.io/mntn/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
+        },
+        {
           image: require(`../assets/mntn/1.png`),
         },
         {
@@ -41,16 +44,15 @@ export default {
         {
           image: require("../assets/mntn/3.png"),
         },
-        {
-          content:
-            "<div style='width:100px;height:100px;background:red;'></div>",
-        },
       ];
       this.tittle =
         "MNTN is completely responsive and pixel perfect hiking guide website";
     }
     if (this.$route.query.name == "adventure") {
       this.slides = [
+        {
+          content: `<a href="https://kacperrozdolski.github.io/Adventure-Card/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
+        },
         {
           image: require(`../assets/adventure/1.png`),
         },
@@ -65,6 +67,9 @@ export default {
     }
     if (this.$route.query.name == "duck") {
       this.slides = [
+        {
+          content: `<a href="https://kacperrozdolski.github.io/Duck-Interactive/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
+        },
         {
           image: require(`../assets/duck/1.png`),
         },
@@ -81,6 +86,9 @@ export default {
     if (this.$route.query.name == "steps") {
       this.slides = [
         {
+          content: `<a href="https://kacperrozdolski.github.io/steps/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
+        },
+        {
           image: require(`../assets/steps/1.png`),
         },
         {
@@ -95,6 +103,9 @@ export default {
     if (this.$route.query.name == "lyte") {
       this.slides = [
         {
+          content: `https://kacperrozdolski.github.io/lyte/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
+        },
+        {
           image: require(`../assets/lyte/1.png`),
         },
         {
@@ -106,6 +117,9 @@ export default {
     if (this.$route.query.name == "charity") {
       this.slides = [
         {
+          content: `<a href="https://kacperrozdolski.github.io/Adventure-Card/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
+        },
+        {
           image: require(`../assets/charity/1.png`),
         },
         {
@@ -116,7 +130,11 @@ export default {
         "Earth Foundation is completely responsive and pixel perfect charity website";
     }
   },
-
+  methods: {
+    console() {
+      console.log("dupa");
+    },
+  },
   data() {
     return {
       tittle: "",
@@ -140,7 +158,7 @@ export default {
   }
   .presentation-carousele {
     height: 100%;
-    width: 60%;
+    width: 70%;
     background: transparent;
     .vueperslides__arrow {
       color: #16c79a;
@@ -151,6 +169,17 @@ export default {
     }
     .vueperslides__bullet--active .default {
       background-color: #42b983;
+    }
+    .live {
+      height: 150px;
+      width: 150px;
+      background-image: url("../assets/icons/live.svg");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 10px;
+    }
+    span {
+      color: rgb(110, 110, 110);
     }
   }
 }
