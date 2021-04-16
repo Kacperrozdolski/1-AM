@@ -2,6 +2,7 @@
   <MainHeader />
   <div class="presentation-container">
     <h1>{{ tittle }}</h1>
+    <span>Click <a :href="url" target="_blank">here</a> to go live</span>
     <div class="presentation-carousele">
       <vueper-slides :touchable="false" fixedHeight="100%">
         <vueper-slide
@@ -45,6 +46,7 @@ export default {
           content: `<a href="https://kacperrozdolski.github.io/mntn/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
         },
       ];
+      this.url = "https://kacperrozdolski.github.io/mntn/";
       this.tittle =
         "MNTN is completely responsive and pixel perfect hiking guide website";
     }
@@ -63,6 +65,7 @@ export default {
           content: `<a href="https://kacperrozdolski.github.io/Adventure-Card/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
         },
       ];
+      this.url = "https://kacperrozdolski.github.io/Adventure-Card/";
       this.tittle = "Memory card game in Adventure Time world.";
     }
     if (this.$route.query.name == "duck") {
@@ -80,6 +83,7 @@ export default {
           content: `<a href="https://kacperrozdolski.github.io/Duck-Interactive/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
         },
       ];
+      this.url = "https://kacperrozdolski.github.io/Duck-Interactive/";
       this.tittle =
         "Duck Interactive is completely responsive and pixel perfect company website";
     }
@@ -98,6 +102,7 @@ export default {
           content: `<a href="https://kacperrozdolski.github.io/steps/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
         },
       ];
+      this.url = "https://kacperrozdolski.github.io/steps/";
       this.tittle = "Steps - browser tool for creating simple roadmaps.";
     }
     if (this.$route.query.name == "lyte") {
@@ -112,6 +117,7 @@ export default {
           content: `<a href="https://kacperrozdolski.github.io/lyte/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
         },
       ];
+      this.url = "https://kacperrozdolski.github.io/lyte/";
       this.tittle = "Lyte app - url shortener service.";
     }
     if (this.$route.query.name == "charity") {
@@ -132,19 +138,17 @@ export default {
           content: `<a href="https://kacperrozdolski.github.io/earth-foundation/" target='_blank'><div class='live'></div><a/> <span>click to go live</span>`,
         },
       ];
+      this.url = "https://kacperrozdolski.github.io/earth-foundation/";
       this.tittle =
         "Earth Foundation is completely responsive and pixel perfect charity website";
     }
   },
-  methods: {
-    console() {
-      console.log("dupa");
-    },
-  },
+
   data() {
     return {
       tittle: "",
       slides: [],
+      url: "",
     };
   },
 };
@@ -160,7 +164,17 @@ export default {
   h1 {
     color: #16c79a;
     font-size: 25px;
-    font-weight: 100;
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+  span {
+    color: grey;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+  }
+  a {
+    color: #16c79a;
   }
   .presentation-carousele {
     height: 100%;
