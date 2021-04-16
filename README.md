@@ -1,24 +1,10 @@
-# 1:AM
+# Adeventure Card
+Memory card in Adventure Time world. Build with Vue and it's ecosystem (Vuex,vue-router). Connection to REST Api allows users to compete with each other by setting new records.
 
-## Project setup
+# Project setup
 ```
-yarn install
+npm install
 ```
-
-### Compiles and hot-reloads for development
 ```
-yarn serve
+npm run serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
