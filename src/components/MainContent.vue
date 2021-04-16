@@ -60,26 +60,32 @@ export default {
   .cell:nth-child(1) {
     background-image: url("../assets/projectCovers/adventure.png");
     background-size: cover;
+    background-position: center;
   }
   .cell:nth-child(2) {
     background-image: url("../assets/projectCovers/steps.png");
     background-size: cover;
+    background-position: center;
   }
   .cell:nth-child(3) {
     background-image: url("../assets/projectCovers/lyte.png");
     background-size: cover;
+    background-position: center;
   }
   .cell:nth-child(4) {
     background-image: url("../assets/projectCovers/mntn.png");
     background-size: cover;
+    background-position: center;
   }
   .cell:nth-child(5) {
     background-image: url("../assets/projectCovers/duck.png");
     background-size: cover;
+    background-position: center;
   }
   .cell:nth-child(6) {
     background-image: url("../assets/projectCovers/charity.png");
     background-size: cover;
+    background-position: center;
   }
 }
 </style>

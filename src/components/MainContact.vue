@@ -46,7 +46,7 @@ export default {
     sendMail($event) {
       $event.preventDefault();
       let url =
-        "https://sheet.best/api/sheets/10706cf7-ade5-427a-a64c-d35cc70fbbce";
+        "https://sheet.best/api/sheets/29e437e0-61e7-4236-9a97-a0a6d4ade9f0";
       let data = {
         name: this.name,
         email: this.email,
