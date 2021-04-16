@@ -1,5 +1,5 @@
-# Adeventure Card
-Memory card in Adventure Time world. Build with Vue and it's ecosystem (Vuex,vue-router). Connection to REST Api allows users to compete with each other by setting new records.
+# 1:AM
+Is my personal web page wich contains all my work.
 
 # Project setup
 ```
